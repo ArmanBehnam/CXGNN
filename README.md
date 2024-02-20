@@ -7,11 +7,11 @@ interpret why the model predicts what it does.
 This repository implements a framework to get causal interpretations of an Artificial Neural Network for determining neuron and layer level causality.
 
 ## Contributions
-> Interpretation  of a Neural Network as a Structural Causal Model (SCM)
+> The first GNN causal explainer
 
-> An efficient dictionary-based method to marginalize over the distribution generated on building the SCM
+> We leverage the neural-causal connection, design the GNN neural causal models, and train them to identify the causal explanatory subgraph.
 
-> A working pipeline to delineate causal variables in the model from those with spurious correlation
+> Our results show the effectiveness of CXGNN and its superiority over the state-of-the-art association-based and causality-inspired GNN explainers
 
 ## Workflow 
 The workflow for determining causal variables for a particular prediction of the neural network is shown below. For example, you might want to understand why the neural network predicted that a particular image was a show.
