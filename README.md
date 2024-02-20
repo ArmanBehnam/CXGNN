@@ -13,23 +13,23 @@ This repository implements a framework to get causal interpretations of an Artif
 
 > Our results show the effectiveness of CXGNN and its superiority over the state-of-the-art association-based and causality-inspired GNN explainers
 
-## Workflow 
+## Method 
 The workflow for determining causal variables for a particular prediction of the neural network is shown below. For example, you might want to understand why the neural network predicted that a particular image was a show.
 
 <p align="center">
-  <img src="./images/workflow.png" width="600"> 
+  <img src="./images/Method.png" width="600"> 
 </p>
 
 
 ## Results
-### MNIST
+### Synthetic
 To demonstrate how our algorithm can seperate causal variables from spurious and non causal variables, we conduct a study comparing causal variables predicted by our algorithm with the Pearson Correlation Coefficient of each input variable with the output, as shown in Figure 1. We also verify this numerically via an ablation study. 
 
   <img src="./images/MNIST.jpg" width="500"> 
   <caption>Figure 1 : Causal Variables (Bottom) vs Spurious Variables (Top, in green) for MNIST  </caption>
 
 
-### HELOC Dataset
+### Real World Dataset
 The [HELOC Dataset](https://community.fico.com/s/explainable-machine-learning-challenge?tabset-3158a=2) (Home Equity Line of Credit) is an anonymized dataset provided by FICO.
 The fundamental task is to predict credit risk. A simple ANN is trained for this, reaching 70% validation accuracy. Causal input variables and their ranges are found using the pipeline above.
  
