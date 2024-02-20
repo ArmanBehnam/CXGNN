@@ -36,9 +36,10 @@ We note that there are different ways for the ground truth subgraph to attach to
 The [HELOC Dataset](https://community.fico.com/s/explainable-machine-learning-challenge?tabset-3158a=2) (Home Equity Line of Credit) is an anonymized dataset provided by FICO.
 The fundamental task is to predict credit risk. A simple ANN is trained for this, reaching 70% validation accuracy. Causal input variables and their ranges are found using the pipeline above.
  
-
+<p align="center">
   <img src="./images/real.png" width="500"> 
   <caption>Visualizing explanation results (subgraph containing the red nodes) by our CXGNN on the real-world graphs</caption>
+  </p>
 <br/><br/>
 We observe the explanatory subgraphs found by CXGNN approximately/exactly match the ground truth. However, no existing GNN explainers can do so.
 
