@@ -33,7 +33,7 @@ We note that there are different ways for the ground truth subgraph to attach to
 </p>
 
 ### Real World Dataset
-The
+Real-world graph i.e. (Benzene: 12,000 molecular graphs, and the task is to identify whether a given molecule graph has a benzene ring or not. The ground truth explanations are the nodes(atoms)forming the benzene ring.)
  
 <p align="center">
   <img src="./images/real.png" width="600">
