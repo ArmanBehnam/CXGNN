@@ -17,7 +17,7 @@ This repository implements a framework to get causal interpretations of an Artif
 The workflow for determining causal variables for a particular prediction of the neural network is shown below. For example, you might want to understand why the neural network predicted that a particular image was a show.
 
 <p align="center">
-  <img src="./images/Method.png" width="600"> 
+  <img src="./images/Method.png" width="1000"> 
 </p>
 
 
