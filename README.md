@@ -1,5 +1,6 @@
 # CXGNN
-A GNN causal explainer by building a causal structure and the corresponding neural causal model for a graph. It outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
+A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. It outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
+
 ## Background
 As machine learning models take over real world tasks, there is an increasing requirement for being able to 
 interpret why the model predicts what it does.
