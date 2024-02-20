@@ -28,7 +28,7 @@ To demonstrate how our algorithm can seperate causal variables from spurious and
 <p align="center">
   <img src="./images/syn.png" width="1000"> 
 </p>
-<caption>Visualizing explanation results (subgraph containing the {\color{red} red} nodes) by our {\name} on the synthetic graphs.</caption>
+<caption>Visualizing explanation results (subgraph containing the red nodes) by our CXGNN on the synthetic graphs.</caption>
 
 
 ### Real World Dataset
