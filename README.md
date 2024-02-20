@@ -37,7 +37,7 @@ The [HELOC Dataset](https://community.fico.com/s/explainable-machine-learning-ch
 The fundamental task is to predict credit risk. A simple ANN is trained for this, reaching 70% validation accuracy. Causal input variables and their ranges are found using the pipeline above.
  
 
-  <img src="./images/real.jpg" width="500"> 
+  <img src="./images/real.png" width="500"> 
   <caption>Visualizing explanation results (subgraph containing the red nodes) by our CXGNN on the real-world graphs</caption>
 <br/><br/>
 We observe the explanatory subgraphs found by CXGNN approximately/exactly match the ground truth. However, no existing GNN explainers can do so.
