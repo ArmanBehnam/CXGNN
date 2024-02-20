@@ -37,11 +37,10 @@ The [HELOC Dataset](https://community.fico.com/s/explainable-machine-learning-ch
 The fundamental task is to predict credit risk. A simple ANN is trained for this, reaching 70% validation accuracy. Causal input variables and their ranges are found using the pipeline above.
  
 
-  <img src="./images/HELOC.jpg" width="500"> 
-  <caption>Figure 2: Causal Variables and ranges for HELOC</caption>
+  <img src="./images/real.jpg" width="500"> 
+  <caption>Visualizing explanation results (subgraph containing the red nodes) by our CXGNN on the real-world graphs</caption>
 <br/><br/>
-Figure 1 and 2 both show how variables causal for a particular prediction are delineated by the algorithm. For example, Figure 2 shows that the variable 'External Risk Estimate' being between 42.5 to 52.8 is causal for a bad credit risk prediction.
-
+We observe the explanatory subgraphs found by CXGNN approximately/exactly match the ground truth. However, no existing GNN explainers can do so.
 
 ## Related Literature
 
