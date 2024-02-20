@@ -22,8 +22,8 @@ Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the 
 
 
 ## Results
-### Synthetic
-To demonstrate how our algorithm can seperate causal variables from spurious and non causal variables, we conduct a study comparing causal variables predicted by our algorithm with the Pearson Correlation Coefficient of each input variable with the output, as shown in Figure 1. We also verify this numerically via an ablation study. 
+### Synthetic Graphs
+We note that there are different ways for the ground truth subgraph to attach to the base synthetic graph. We can see CXGNN’s output exactly matches the ground truth in these cases, while the existing GNN explainers cannot. One reason could be that existing GNN explainers are sensitive to the spurious relation. 
 
 <p align="center">
   <img src="./images/syn.png" width="1000"> 
