@@ -25,8 +25,10 @@ Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the 
 ### Synthetic
 To demonstrate how our algorithm can seperate causal variables from spurious and non causal variables, we conduct a study comparing causal variables predicted by our algorithm with the Pearson Correlation Coefficient of each input variable with the output, as shown in Figure 1. We also verify this numerically via an ablation study. 
 
-  <img src="./images/MNIST.jpg" width="500"> 
-  <caption>Figure 1 : Causal Variables (Bottom) vs Spurious Variables (Top, in green) for MNIST  </caption>
+<p align="center">
+  <img src="./images/syn.png" width="1000"> 
+</p>
+<caption>Visualizing explanation results (subgraph containing the {\color{red} red} nodes) by our {\name} on the synthetic graphs.</caption>
 
 
 ### Real World Dataset
