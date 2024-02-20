@@ -14,7 +14,7 @@ This repository implements a framework to get causal interpretations of an Artif
 > Our results show the effectiveness of CXGNN and its superiority over the state-of-the-art association-based and causality-inspired GNN explainers
 
 ## Method 
-Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure G with respect to a reference node v as input and returns a well-trained GNN-NCM model ̂$ M(G, θ∗)$.
+Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure G with respect to a reference node v as input and returns a well-trained ![equation](https://latex.codecogs.com/gif.latex?%5Cwidehat%7B%5Cmathcal%7BM%7D%7D%28%5Cmathcal%7BG%7D%2C%20%5Ctheta%5E%2A%29). The underlying subgraph of the causal structure centered by v∗ is then treated as the causal explanatory subgraph Γ. Algorithm 2 describes the learning process to find Γ.
 
 <p align="center">
   <img src="./images/Method.png" width="1000"> 
