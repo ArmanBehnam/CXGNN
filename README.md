@@ -1,10 +1,12 @@
 # CXGNN
 A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. It outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
 
-## Background
-As machine learning models take over real world tasks, there is an increasing requirement for being able to 
-interpret why the model predicts what it does.
-This repository implements a framework to get causal interpretations of an Artificial Neural Network for determining neuron and layer level causality.
+## Motivations
+> Graph classification via causal inference in the true way (based on interventional data)
+
+> Understanding and quantifying cause-and-effect relations between variables
+
+> Identify the causal explanatory subgraph
 
 ## Contributions
 > The first GNN causal explainer
