@@ -43,8 +43,9 @@ Figure 1 and 2 both show how variables causal for a particular prediction are de
 
 ## Related Literature
 
-1. Pearl, Judea. "An introduction to causal inference." The international journal of biostatistics 6, no. 2 (2010).
-2. Chattopadhyay, Aditya, Piyushi Manupriya, Anirban Sarkar, and Vineeth N. Balasubramanian. "Neural Network Attributions: A Causal Perspective." arXiv preprint arXiv:1902.02302 (2019).
-3. Harradon, Michael, Jeff Druce, and Brian Ruttenberg. "Causal learning and explanation of deep neural networks via autoencoded activations." arXiv preprint arXiv:1802.00541 (2018).
-4. Molnar, Christoph. Interpretable machine learning. Lulu. com, 2019.
-
+1. Agarwal, Chirag, et al. "Evaluating explainability for graph neural networks." Scientific Data 10.1 (2023): 144.
+2. Luo, Dongsheng, et al. "Parameterized explainer for graph neural network." Advances in neural information processing systems 33 (2020): 19620-19631.
+3. Pearl, Judea, and Dana Mackenzie. The book of why: the new science of cause and effect. Basic books, 2018.
+4. Geiger, Atticus, et al. "Inducing causal structure for interpretable neural networks." International Conference on Machine Learning. PMLR, 2022.
+5. Shan, Caihua, et al. "Reinforcement learning enhanced explainer for graph neural networks." Advances in Neural Information Processing Systems 34 (2021): 22523-22533.
+6. Lin, Wanyu, et al. "Orphicx: A causality-inspired latent variable model for interpreting graph neural networks." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022.
