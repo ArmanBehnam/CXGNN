@@ -14,7 +14,7 @@ This repository implements a framework to get causal interpretations of an Artif
 > Our results show the effectiveness of CXGNN and its superiority over the state-of-the-art association-based and causality-inspired GNN explainers
 
 ## Method 
-The workflow for determining causal variables for a particular prediction of the neural network is shown below. For example, you might want to understand why the neural network predicted that a particular image was a show.
+Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure G with respect to a reference node v as input and returns a well-trained GNN-NCM model ̂$ M(G, θ∗)$.
 
 <p align="center">
   <img src="./images/Method.png" width="1000"> 
