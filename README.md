@@ -27,9 +27,8 @@ To demonstrate how our algorithm can seperate causal variables from spurious and
 
 <p align="center">
   <img src="./images/syn.png" width="1000"> 
-</p>
 <caption>Visualizing explanation results (subgraph containing the red nodes) by our CXGNN on the synthetic graphs.</caption>
-
+</p>
 
 ### Real World Dataset
 The [HELOC Dataset](https://community.fico.com/s/explainable-machine-learning-challenge?tabset-3158a=2) (Home Equity Line of Credit) is an anonymized dataset provided by FICO.
