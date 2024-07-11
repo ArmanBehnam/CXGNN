@@ -1,10 +1,10 @@
-# CXGNN
-A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. It outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
+# Graph Neural Network Causal Explanation
+A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. This method outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
 
 ## Motivations
-> Graph classification via causal inference in the true way (based on interventional data)
+> Graph classification via causal inference in the correct way (based on interventional data)
 
-> Understanding and quantifying cause-and-effect relations between variables
+> Understanding and quantifying cause-and-effect relations between observable variables
 
 > Identify the causal explanatory subgraph
 
@@ -16,7 +16,7 @@ A GNN causal explainer based on a graph's causal structure and it's correspondin
 > Our results show the effectiveness of CXGNN and its superiority over the state-of-the-art association-based and causality-inspired GNN explainers
 
 ## Method 
-Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure G with respect to a reference node v as input and returns a well-trained GNN-NCM ![equation](https://latex.codecogs.com/gif.latex?%5Cwidehat%7B%5Cmathcal%7BM%7D%7D%28%5Cmathcal%7BG%7D%2C%20%5Ctheta%5E%2A%29). The underlying subgraph of the causal structure centered by v∗ is then treated as the causal explanatory subgraph Γ. Algorithm 2 describes the learning process to find Γ.
+Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure g with respect to a reference node v as input and returns a well-trained GNN-NCM. The underlying subgraph of the causal structure is then treated as the causal explanatory subgraph Γ. Algorithm 2 describes the learning process to find Γ.
 
 <p align="center">
   <img src="./images/Method.png" width="1000"> 
