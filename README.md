@@ -1,4 +1,4 @@
-<p align="center"><img src="./images/logo.png" width="300"> </p>
+<p align="center"><img src="./images/logo.png" width="500"> </p>
 <!-- This repository contains the source code for the paper `Graph Neural Network Causal Explanation via Neural Causal Models` -->
 
 # Graph Neural Network Causal Explanation
