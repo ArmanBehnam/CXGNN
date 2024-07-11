@@ -1,3 +1,7 @@
+<h1 align="center">
+<img src="./images/logo.png" width="500">
+</h1><br>
+
 # Graph Neural Network Causal Explanation
 A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. This method outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
 
