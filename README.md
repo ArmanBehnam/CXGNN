@@ -1,6 +1,13 @@
-<h1 align="center">
-<img src="./images/logo.png" width="300">
-</h1><br>
+<style>
+  .center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+</style>
+
+<img src="./images/logo.png" class="center-image" alt="Logo">
 
 # Graph Neural Network Causal Explanation
 A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. This method outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
