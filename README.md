@@ -19,7 +19,7 @@ A GNN causal explainer based on a graph's causal structure and it's correspondin
 Details of training GNN-NCMs are shown in Algorithm 1. This algorithm takes the causal structure g with respect to a reference node v as input and returns a well-trained GNN-NCM. The underlying subgraph of the causal structure is then treated as the causal explanatory subgraph Γ. Algorithm 2 describes the learning process to find Γ.
 
 <p align="center">
-  <img src="./images/Method.PNG" width="1000"> 
+  <img src="./images/method.png" width="1000"> 
 </p>
 
 
