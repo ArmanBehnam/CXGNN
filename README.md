@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="./images/logo.png" width="500">
+<img src="./images/logo.png" width="300">
 </h1><br>
 
 # Graph Neural Network Causal Explanation
