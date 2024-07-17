@@ -5,7 +5,7 @@
 A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. This method outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
 
 ## Motivations
-> Graph classification via causal inference in the correct way (based on interventional data)
+> Correctly graph classification via causal inference (based on interventional data)
 
 > Understanding and quantifying cause-and-effect relations between observable variables
 
