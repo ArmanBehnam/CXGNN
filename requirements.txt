@@ -1,0 +1,29 @@
+# Core dependencies
+torch>=1.9.0
+torch-geometric>=2.0.0
+networkx>=2.6.3
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+scikit-learn>=0.24.2
+tqdm>=4.62.0
+
+# Graph specific
+rdkit>=2022.3.1
+torch-scatter>=2.0.9
+torch-sparse>=0.6.13
+graphxai>=0.2.0
+
+# Machine Learning & Deep Learning
+pytz>=2021.3
+hydra-core>=1.1.0
+omegaconf>=2.1.1
+
+# Visualization & Plotting
+seaborn>=0.11.2
+
+# Development & Testing
+pytest>=6.2.5
+black>=21.12b0
+isort>=5.10.1
+flake8>=4.0.1
