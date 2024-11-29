@@ -1,8 +1,10 @@
-<p align="center"><img src="./images/logo.png" width="400"> </p>
+<p align="center"><img src="./images/logo.png" width="300"> </p>
 <!-- This repository contains the source code for the paper `Graph Neural Network Causal Explanation via Neural Causal Models` -->
 
 # Graph Neural Network Causal Explanation
 A GNN causal explainer based on a graph's causal structure and it's corresponding neural causal model. This method outperforms the existing GNN explainers in exactly finding the ground-truth explanations.
+
+## <a href="https://arxiv.org/pdf/2407.09378">Paper</a> - <a href="https://eccv.ecva.net/virtual/2024/poster/472">Web</a> - <a href="https://www.youtube.com/watch?v=TGNxpDf3Hyk">Video</a> - <a href="https://eccv.ecva.net/media/PosterPDFs/ECCV%202024/472.png?t=1727683520.9816825">Poster</a>
 
 ## Motivations
 > Correctly graph classification via causal inference (based on interventional data)
