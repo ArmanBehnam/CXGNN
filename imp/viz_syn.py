@@ -105,7 +105,6 @@ def build_graph(width_basis,basis_type,Ground_truth,start=0,rdm_basis_plugins=Fa
                 b = np.random.randint(1, 4)
                 basis.add_edges_from([(a + start, b + plugins[shape_id])])
         temp_labels = [r + col_start for r in roles_graph_s]
-        # temp_labels[0] += 100 * seen_shapes[shape_type][0]
         role_id += temp_labels
         start += n_s
 
