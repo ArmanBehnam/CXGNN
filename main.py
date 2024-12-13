@@ -10,8 +10,8 @@ from imp_real import benzene, fluoride_carbonyl
 # tree_grid(basis_type="tree", Ground_truth="grid", width_basis = 2, m = 2, num_epochs = 10, num_iterations = 2)
 # tree_cycle(basis_type="tree", Ground_truth="cycle", width_basis = 3, m = 2, num_epochs = 50, num_iterations = 100)
 
-# data_path_benzene = 'D:/University/Research/GraphXAI/graphxai/datasets/real_world/benzene/benzene.npz'
-# data_path_FluorideCarbonyl = 'D:/University/Research/GraphXAI/graphxai/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
+# data_path_benzene = '/datasets/real_world/benzene/benzene.npz'
+# data_path_FluorideCarbonyl = '/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
 # dataset_Benzene = Benzene(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_benzene)
 # dataset_FluorideCarbonyl = FluorideCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_FluorideCarbonyl)
 
