@@ -22,13 +22,6 @@ def alg_2(Graph,num_epochs,data,role_id):
     best_expected_p = models[best_node]['expected_p']
     best_output = models[best_node]['output']
     best_new_v = models[best_node]['new_v']
-    # sorted_nodes = sorted(models, key=lambda k: models[k]['expected_p'], reverse=True)
-    # for node in sorted_nodes:
-    #     if node not in best_new_v:
-    #         best_new_v.add(node)
-    #         break
-    # if 0 in best_new_v:
-    #     best_new_v.remove(0)
     print_expected_p_for_each_node(models)
     print(best_new_v, best_node)
     return models, best_total_loss, best_model, best_expected_p, best_output, best_new_v, best_node
