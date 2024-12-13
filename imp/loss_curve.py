@@ -94,7 +94,6 @@ def plot_CXGNN(G, node_imp, predicted_classes, role_id, num_epochs = None, iter_
         plt.legend(handles=legend_handles)
         plt.savefig(os.path.join(unsuccessful_path, f'Loss_Curves_Unsuccessful_explanation_iter_{iter_num}.png'))
         # plt.savefig(f'{unsuccessful_path}Loss_Curves_Unuccessful_explanation_iter_{iter_num}.png')
-    # plt.show()
     my_validity = int(all(item in relative_positives for item in best_new_v))
     print(f"My Explanation recall is: {my_recall * 100:.2f}%")
     print("My Explanation found the ground truth? ", my_gt_find)
@@ -142,8 +141,6 @@ def plot_loss_1(G, model, node_imp, predicted_classes, data, role_id, num_epochs
             plt.plot(loss_data_ground_truth_nodes[node], label=f'Node {node} (Ground Truth)',color='green')
             vis_loss_1.append(models[node]['loss_history'])
             print(node, models[node]['loss_history'])
-        # non_gt_nodes = set(G.nodes) - set(relative_positives)
-        # selected_non_gt_nodes = random.sample(list(non_gt_nodes), min(5, len(list(non_gt_nodes))))
         for node in non_gt_nodes:
             loss_data_ground_truth_nodes[node] = models[node]['loss_history']
             plt.plot(loss_data_ground_truth_nodes[node], label=f'Node {node} (Ground Truth)',color='red',linestyle='--', dashes=[5, 10])
@@ -159,7 +156,6 @@ def plot_loss_1(G, model, node_imp, predicted_classes, data, role_id, num_epochs
         ]
         plt.legend(handles=legend_handles)
         plt.savefig(os.path.join(successful_path, f'Loss_Curves_Successful_explanation_iter_{iter_num}.png'))
-        # plt.savefig(f'{successful_path}Loss_Curves_Successful_explanation_iter_{iter_num}.png')
         # plt.show()
     else:
         print('No')
@@ -183,7 +179,6 @@ def plot_loss_1(G, model, node_imp, predicted_classes, data, role_id, num_epochs
         # Add the legend to the plot
         plt.legend(handles=legend_handles)
         plt.savefig(os.path.join(unsuccessful_path, f'Loss_Curves_Unsuccessful_explanation_iter_{iter_num}.png'))
-        # plt.savefig(f'{unsuccessful_path}Loss_Curves_Unuccessful_explanation_iter_{iter_num}.png')
     # plt.show()
     my_validity = int(all(item in relative_positives for item in best_new_v))
     print(f"My Explanation recall is: {my_recall * 100:.2f}%")
@@ -354,24 +349,12 @@ def loss_fig_2(basis_type=None, Ground_truth=None, width_basis = None, m = None,
         validities_df.loc[len(validities_df)] = validities
         total_node.append(node)
         total_exp.append(exp)
-    # image_paths = r'D:\University\Research\loss_2'
-    # images = [f for f in os.listdir(image_paths) if f.endswith('.png')][:4]
-    # fig, axs = plt.subplots(2, 2, figsize=(20, 10))  # Adjust the size as needed
-    # for idx, image_name in enumerate(images):
-    #     image_path = os.path.join(image_paths, image_name)
-    #     image = Image.open(image_path)
-    #     row = idx // 2
-    #     col = idx % 2
-    #     axs[row, col].imshow(image)
-    #     axs[row, col].axis('off')  # Hide the axis
-    # plt.tight_layout()
-    # plt.savefig(r'D:\University\Research\loss_2\combined_figure.png', dpi=500)  # Save the combined figure
         plt.show()
 
 # loss_fig_2(basis_type="tree", Ground_truth="house", width_basis = 3, m = 3, num_epochs = 5, num_iterations = 100)
 
-data_path_benzene = 'D:/University/Research/GraphXAI/graphxai/datasets/real_world/benzene/benzene.npz'
-# data_path_FluorideCarbonyl = 'D:/University/Research/GraphXAI/graphxai/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
+data_path_benzene = 'datasets/real_world/benzene/benzene.npz'
+# data_path_FluorideCarbonyl = 'datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
 dataset_Benzene = Benzene(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_benzene)
 # dataset_FluorideCarbonyl = FluorideCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_FluorideCarbonyl)
 def loss_fig_3(dataset = None, num_epochs = None, num_iterations = None):
@@ -468,18 +451,6 @@ def loss_fig_4(dataset = None, num_epochs = None, num_iterations = None):
             groundtruth_find_df.loc[len(groundtruth_find_df)] = groundtruth_find
             graph_explanation_recall_df.loc[len(graph_explanation_recall_df)] = graph_explanation_recall
             validities_df.loc[len(validities_df)] = validities
-    # image_paths = r'D:\University\Research\loss_4'
-    # images = [f for f in os.listdir(image_paths) if f.endswith('.png')][:4]
-    # fig, axs = plt.subplots(2, 2, figsize=(20, 10))  # Adjust the size as needed
-    # for idx, image_name in enumerate(images):
-    #     image_path = os.path.join(image_paths, image_name)
-    #     image = Image.open(image_path)
-    #     row = idx // 2
-    #     col = idx % 2
-    #     axs[row, col].imshow(image)
-    #     axs[row, col].axis('off')  # Hide the axis
-    # plt.tight_layout()
-    # plt.savefig(r'D:\University\Research\loss_4\combined_figure.png', dpi=500)  # Save the combined figure
             plt.show()
 
 # loss_fig_3(dataset = dataset_FluorideCarbonyl, num_epochs = 20, num_iterations = 100)
