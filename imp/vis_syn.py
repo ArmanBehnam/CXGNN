@@ -144,15 +144,6 @@ def generate_random_graph(basis_type="ba", Ground_truth="grid"):
     return G, role_id, name
 
 num_iterations = 10
-# graphs_per_figure = 3
-# for i in range(0, num_iterations, graphs_per_figure):
-#     plt.figure(figsize=(10, 12), dpi=300)
-#     for j in range(graphs_per_figure):
-#         G, role_id, name = generate_random_graph(basis_type="ba", Ground_truth="house")
-#         plt.subplot(graphs_per_figure,1, j+1)
-#         nx.draw(G, node_size=30, with_labels=False, node_color=["red" if role_id[node] == 1 else "blue" for node in G.nodes()])
-#     plt.tight_layout()
-#     plt.show()
 plt.figure(figsize=(10, 12), dpi=300)
 G, role_id, name = generate_random_graph(basis_type="ba", Ground_truth="house")
 nx.draw(G, node_size=30, with_labels=False, node_color=["red" if role_id[node] == 1 else "blue" for node in G.nodes()])
