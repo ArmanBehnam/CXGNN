@@ -42,7 +42,6 @@ def house(start, role_start=0):
             (start + 3, start),
         ]
     )
-    # graph.add_edges_from([(start, start + 2), (start + 1, start + 3)])
     graph.add_edges_from([(start + 4, start), (start + 4, start + 1)])
     roles = [role_start, role_start, role_start, role_start, role_start]
     return graph, roles
@@ -109,7 +108,6 @@ def build_graph(width_basis,basis_type,Ground_truth,start=0,rdm_basis_plugins=Fa
                 b = np.random.randint(1, 4)
                 basis.add_edges_from([(a + start, b + plugins[shape_id])])
         temp_labels = [r + col_start for r in roles_graph_s]
-        # temp_labels[0] += 100 * seen_shapes[shape_type][0]
         role_id += temp_labels
         start += n_s
 
