@@ -15,10 +15,9 @@ from graphxai.utils.explanation import Explanation
 from graphxai.datasets import AlkaneCarbonyl, Benzene, FluorideCarbonyl
 from graphxai.explainers import PGMExplainer, GuidedBP, IntegratedGradExplainer, GradExplainer, GNNExplainer
 import matplotlib.pyplot as plt
-data_path_benzene = 'D:/University/Research1/GraphXAI/graphxai/datasets/real_world/benzene/benzene.npz'
-data_path_FluorideCarbonyl = 'D:/University/Research1/GraphXAI/graphxai/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
+data_path_benzene = 'datasets/real_world/benzene/benzene.npz'
+data_path_FluorideCarbonyl = 'datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
 dataset_Benzene = Benzene(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_benzene)
-# dataset_FluorideCarbonyl = FluorideCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_FluorideCarbonyl)
 def preprocess(dataset,i):
     data, exp = dataset[i]
     explanation = exp[0]
@@ -353,7 +352,6 @@ def fluoride_carbonyl(dataset = None, num_epochs = None, num_iterations = None):
             else:
                 num_features = data.x.size(1)
                 feature_imp = torch.ones(num_features, dtype=torch.float)
-            # gt_exp = Explanation(feature_imp=feature_imp, node_imp=node_imp, edge_imp=edge_imp, graph=data)
             groundtruth_find, graph_explanation_accuracy, graph_explanation_recall, validities = implement_CXGNN(G,node_imp,predicted_classes,data,role_id,num_epochs)
             graph_explanation_accuracy_df.loc[len(graph_explanation_accuracy)] = graph_explanation_accuracy
             groundtruth_find_df.loc[len(groundtruth_find_df)] = groundtruth_find
