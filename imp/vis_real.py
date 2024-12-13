@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 import torch
 from imp_syn import from_networkx_to_torch, GIN
 from graphxai.datasets import AlkaneCarbonyl, Benzene, FluorideCarbonyl
-# data_path_benzene = 'D:/University/Spring2023/Research/Session25-230918/GraphXAI/graphxai/datasets/real_world/benzene/benzene.npz'
-# data_path_alkane_carbonyl = 'D:/University/Spring2023/Research/Session25-230918/GraphXAI/graphxai/datasets/real_world/alkane_carbonyl/alkane_carbonyl.npz'
+# data_path_benzene = 'datasets/real_world/benzene/benzene.npz'
+# data_path_alkane_carbonyl = 'datasets/real_world/alkane_carbonyl/alkane_carbonyl.npz'
 # for i in range(750, num_iterations):
-# data_path_FluorideCarbonyl = 'D:/University/Spring2023/Research/Session25-230918/GraphXAI/graphxai/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
+# data_path_FluorideCarbonyl = 'datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
 # dataset_Benzene = Benzene(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_benzene)
 # dataset_AlkaneCarbonyl = AlkaneCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_alkane_carbonyl)
 # dataset_FluorideCarbonyl = FluorideCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_FluorideCarbonyl)
@@ -99,7 +99,7 @@ def vis_NCI1():
     filtered_causal_graphs = {graph_id: NCI1_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in NCI1_causal_graphs}
     vis_graph(unique_labels = unique_labels, graph_id = filtered_graph_ids, causal_graphs = filtered_causal_graphs, df = NCI1_df, title =None)
 def vis_Mutagenicity():
-    Mutagenicity = 'D:/University/Research/data/Mutagenicity/'
+    Mutagenicity = 'data/Mutagenicity/'
     Mutagenicity_df = pd.read_csv(Mutagenicity + 'Mutagenicity_A.txt', sep=',', header=None, names=['from', 'to'])
     Mutagenicity_graph_indicator = pd.read_csv(Mutagenicity + 'Mutagenicity_graph_indicator.txt', header=None, names=['graph_id'])
     Mutagenicity_node_labels = pd.read_csv(Mutagenicity + 'Mutagenicity_node_labels.txt', header=None, names=['node_label'])
@@ -118,7 +118,7 @@ def vis_Mutagenicity():
     filtered_causal_graphs = {graph_id: Mutagenicity_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in Mutagenicity_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs, df=Mutagenicity_df, title =None)
 def vis_ENZYMES():
-    ENZYMES = 'D:/University/Research/data/ENZYMES/'
+    ENZYMES = 'data/ENZYMES/'
     ENZYMES_df = pd.read_csv(ENZYMES + 'ENZYMES_A.txt', sep=',', header=None, names=['from', 'to'])
     ENZYMES_graph_indicator = pd.read_csv(ENZYMES + 'ENZYMES_graph_indicator.txt', header=None, names=['graph_id'])
     ENZYMES_node_labels = pd.read_csv(ENZYMES + 'ENZYMES_node_labels.txt', header=None,names=['node_label'])
@@ -137,7 +137,7 @@ def vis_ENZYMES():
     filtered_causal_graphs = {graph_id: ENZYMES_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in ENZYMES_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=ENZYMES_df, title=None)
 def vis_AIDS():
-    AIDS = 'D:/University/Research/data/AIDS/'
+    AIDS = 'data/AIDS/'
     AIDS_df = pd.read_csv(AIDS + 'AIDS_A.txt', sep=',', header=None, names=['from', 'to'])
     AIDS_graph_indicator = pd.read_csv(AIDS + 'AIDS_graph_indicator.txt', header=None, names=['graph_id'])
     AIDS_node_labels = pd.read_csv(AIDS + 'AIDS_node_labels.txt', header=None, names=['node_label'])
@@ -157,7 +157,7 @@ def vis_AIDS():
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=AIDS_df, title=None)
 
 def vis_PROTEINS():
-    PROTEINS = 'D:/University/Research/data/PROTEINS/'
+    PROTEINS = 'data/PROTEINS/'
     PROTEINS_df = pd.read_csv(PROTEINS + 'PROTEINS_A.txt', sep=',', header=None, names=['from', 'to'])
     PROTEINS_graph_indicator = pd.read_csv(PROTEINS + 'PROTEINS_graph_indicator.txt', header=None, names=['graph_id'])
     PROTEINS_node_labels = pd.read_csv(PROTEINS + 'PROTEINS_node_labels.txt', header=None, names=['node_label'])
@@ -177,7 +177,7 @@ def vis_PROTEINS():
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=PROTEINS_df, title=None)
 
 def vis_REDDIT_BINARY():
-    REDDIT_BINARY = 'D:/University/Research/data/REDDIT-BINARY/'
+    REDDIT_BINARY = 'data/REDDIT-BINARY/'
     REDDIT_BINARY_df = pd.read_csv(REDDIT_BINARY + 'REDDIT-BINARY_A.txt', sep=',', header=None, names=['from', 'to'])
     REDDIT_BINARY_graph_indicator = pd.read_csv(REDDIT_BINARY + 'REDDIT-BINARY_graph_indicator.txt', header=None, names=['graph_id'])
     # REDDIT_BINARY_node_labels = pd.read_csv(REDDIT_BINARY + 'REDDIT-BINARY_node_labels.txt', header=None, names=['node_label'])
@@ -215,7 +215,7 @@ def get_node_labels_by_graph(path):
             graph_node_labels[graph_id].append(0)  # Node is not part of the ground truth
 
     return graph_node_labels
-REDDIT_BINARY = 'D:/University/Research/data/REDDIT-BINARY/'
+REDDIT_BINARY = 'data/REDDIT-BINARY/'
 node_labels_by_graph = get_node_labels_by_graph(REDDIT_BINARY)
 for graph_id, labels in node_labels_by_graph.items():
     print(f"Node labels for graph {graph_id}: {labels}")
