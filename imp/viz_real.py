@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 import torch
 from imp_syn import from_networkx_to_torch, GIN
 from graphxai.datasets import AlkaneCarbonyl, Benzene, FluorideCarbonyl
-# data_path_benzene = 'D:/University/Spring2023/Research/Session25-230918/GraphXAI/graphxai/datasets/real_world/benzene/benzene.npz'
-# data_path_alkane_carbonyl = 'D:/University/Spring2023/Research/Session25-230918/GraphXAI/graphxai/datasets/real_world/alkane_carbonyl/alkane_carbonyl.npz'
+# data_path_benzene = 'datasets/real_world/benzene/benzene.npz'
+# data_path_alkane_carbonyl = 'Ddatasets/real_world/alkane_carbonyl/alkane_carbonyl.npz'
 # for i in range(750, num_iterations):
-data_path_FluorideCarbonyl = 'D:/University/Research/GraphXAI/graphxai/datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
+data_path_FluorideCarbonyl = 'datasets/real_world/fluoride_carbonyl/fluoride_carbonyl.npz'
 # dataset_Benzene = Benzene(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_benzene)
 # dataset_AlkaneCarbonyl = AlkaneCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_alkane_carbonyl)
 dataset_FluorideCarbonyl = FluorideCarbonyl(split_sizes = (0.75, 0.05, 0.2), data_path = data_path_FluorideCarbonyl)
@@ -58,10 +58,7 @@ def vis_FluorideCarbonyl(dataset):
         if has_one:  # Proceed only if there is a 1 in role_id
             plt.figure(figsize=(10, 12), dpi=300)
             pos = nx.spring_layout(G, seed=1234)
-            # nx.draw(G, node_size=30, with_labels=False, node_color=["red" if role_id[node] == 1 else "blue" for node in G.nodes()])
-            # node_colors_new_v = ["red" if node in role_id[node] else "blue" for node in G.nodes]
             node_colors_new_v = ["yellow" if role_id[node] == 1 else "blue" for node in G.nodes]
-
             edge_colors = ["red" if role_id[u]==1 and role_id[v]==1 else "grey" for u, v in G.edges]
             nx.draw(G, pos, with_labels=False, node_size=400, font_size=10, font_weight='bold',
                     node_color=node_colors_new_v, edge_color=edge_colors)
@@ -79,7 +76,6 @@ def vis_graph(unique_labels, graph_id, causal_graphs, df, title):
         G.add_edges_from(cg.p)
         pos = nx.spring_layout(G)
         graph_data = df[df['graph_id'] == graph_id]
-        # node_label_map = dict(zip(graph_data['from'], graph_data['node_label']))
         node_labels = graph_data.set_index('from')['node_label'].to_dict()
         node_colors = [color_map.get(node_labels.get(node), default_color) for node in G.nodes]
         ax = axes[idx]
@@ -90,7 +86,7 @@ def vis_graph(unique_labels, graph_id, causal_graphs, df, title):
     plt.tight_layout()
     plt.show()
 def vis_NCI1():
-    NCI1 = 'D:/University/Research/data/NCI1/'
+    NCI1 = 'data/NCI1/'
     NCI1_df = pd.read_csv(NCI1 + 'NCI1_A.txt', sep=',', header=None, names=['from', 'to'])
     NCI1_graph_indicator = pd.read_csv(NCI1 + 'NCI1_graph_indicator.txt', header=None, names=['graph_id'])
     NCI1_node_labels = pd.read_csv(NCI1 + 'NCI1_node_labels.txt', header=None, names=['node_label'])
@@ -114,7 +110,7 @@ def vis_NCI1():
     filtered_causal_graphs = {graph_id: NCI1_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in NCI1_causal_graphs}
     vis_graph(unique_labels = unique_labels, graph_id = filtered_graph_ids, causal_graphs = filtered_causal_graphs, df = NCI1_df, title =None)
 def vis_Mutagenicity():
-    Mutagenicity = 'D:/University/Research/data/Mutagenicity/'
+    Mutagenicity = 'data/Mutagenicity/'
     Mutagenicity_df = pd.read_csv(Mutagenicity + 'Mutagenicity_A.txt', sep=',', header=None, names=['from', 'to'])
     Mutagenicity_graph_indicator = pd.read_csv(Mutagenicity + 'Mutagenicity_graph_indicator.txt', header=None, names=['graph_id'])
     Mutagenicity_node_labels = pd.read_csv(Mutagenicity + 'Mutagenicity_node_labels.txt', header=None, names=['node_label'])
@@ -133,7 +129,7 @@ def vis_Mutagenicity():
     filtered_causal_graphs = {graph_id: Mutagenicity_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in Mutagenicity_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs, df=Mutagenicity_df, title =None)
 def vis_ENZYMES():
-    ENZYMES = 'D:/University/Research/data/ENZYMES/'
+    ENZYMES = 'data/ENZYMES/'
     ENZYMES_df = pd.read_csv(ENZYMES + 'ENZYMES_A.txt', sep=',', header=None, names=['from', 'to'])
     ENZYMES_graph_indicator = pd.read_csv(ENZYMES + 'ENZYMES_graph_indicator.txt', header=None, names=['graph_id'])
     ENZYMES_node_labels = pd.read_csv(ENZYMES + 'ENZYMES_node_labels.txt', header=None,names=['node_label'])
@@ -152,7 +148,7 @@ def vis_ENZYMES():
     filtered_causal_graphs = {graph_id: ENZYMES_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in ENZYMES_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=ENZYMES_df, title=None)
 def vis_AIDS():
-    AIDS = 'D:/University/Research/data/AIDS/'
+    AIDS = 'data/AIDS/'
     AIDS_df = pd.read_csv(AIDS + 'AIDS_A.txt', sep=',', header=None, names=['from', 'to'])
     AIDS_graph_indicator = pd.read_csv(AIDS + 'AIDS_graph_indicator.txt', header=None, names=['graph_id'])
     AIDS_node_labels = pd.read_csv(AIDS + 'AIDS_node_labels.txt', header=None, names=['node_label'])
@@ -171,7 +167,7 @@ def vis_AIDS():
     filtered_causal_graphs = {graph_id: AIDS_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in AIDS_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=AIDS_df, title=None)
 def vis_PROTEINS():
-    PROTEINS = 'D:/University/Research/data/PROTEINS/'
+    PROTEINS = 'data/PROTEINS/'
     PROTEINS_df = pd.read_csv(PROTEINS + 'PROTEINS_A.txt', sep=',', header=None, names=['from', 'to'])
     PROTEINS_graph_indicator = pd.read_csv(PROTEINS + 'PROTEINS_graph_indicator.txt', header=None, names=['graph_id'])
     PROTEINS_node_labels = pd.read_csv(PROTEINS + 'PROTEINS_node_labels.txt', header=None, names=['node_label'])
@@ -190,8 +186,7 @@ def vis_PROTEINS():
     filtered_causal_graphs = {graph_id: PROTEINS_causal_graphs[graph_id] for graph_id in filtered_graph_ids if graph_id in PROTEINS_causal_graphs}
     vis_graph(unique_labels=unique_labels, graph_id=filtered_graph_ids, causal_graphs=filtered_causal_graphs,df=PROTEINS_df, title=None)
 def vis_REDDIT():
-    # Paths
-    REDDIT = 'D:/University/Research/data/REDDIT-BINARY/'
+    REDDIT = 'data/REDDIT-BINARY/'
     hot_id_file_path = REDDIT + 'hot_id.txt'
 
     # Reading graph data
@@ -290,4 +285,3 @@ def vis_REDDIT():
     if filtered_graph_ids:
         vis_graph(unique_labels=unique_labels, graph_id=list(filtered_graph_ids), causal_graphs=filtered_causal_graphs,
               df=REDDIT_df, title='Graph Visualization')
-# vis_FluorideCarbonyl(dataset = dataset_FluorideCarbonyl)
